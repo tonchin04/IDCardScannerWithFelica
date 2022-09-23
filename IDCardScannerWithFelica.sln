@@ -5,8 +5,6 @@ VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IDCardScannerWithFelica", "IDCardScannerWithFelica.csproj", "{1D789B0F-A9FB-41C7-81B2-7F6A4A7892A8}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "IDCardScannerWithFelicaInstaller", "..\IDCardScannerWithFelicaInstaller\IDCardScannerWithFelicaInstaller.vdproj", "{268A680B-902C-4BD6-9300-7613C9FD0AAB}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{1D789B0F-A9FB-41C7-81B2-7F6A4A7892A8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1D789B0F-A9FB-41C7-81B2-7F6A4A7892A8}.Release|x86.ActiveCfg = Release|x86
 		{1D789B0F-A9FB-41C7-81B2-7F6A4A7892A8}.Release|x86.Build.0 = Release|x86
-		{268A680B-902C-4BD6-9300-7613C9FD0AAB}.Debug|Any CPU.ActiveCfg = Debug
-		{268A680B-902C-4BD6-9300-7613C9FD0AAB}.Debug|x86.ActiveCfg = Debug
-		{268A680B-902C-4BD6-9300-7613C9FD0AAB}.Release|Any CPU.ActiveCfg = Release
-		{268A680B-902C-4BD6-9300-7613C9FD0AAB}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
