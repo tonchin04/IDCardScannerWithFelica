@@ -13,6 +13,8 @@
     <FileVersion>2.1</FileVersion>
     <ApplicationIcon>favicon.ico</ApplicationIcon>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/tonchin04/IDCardScannerWithFelica</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/tonchin04/IDCardScannerWithFelica</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
