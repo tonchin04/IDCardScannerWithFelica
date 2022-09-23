@@ -1,0 +1,43 @@
+﻿<Window x:Class="IDCardScannerWithFelica.Setting"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="設定" Height="600" Width="800" ResizeMode="NoResize" Icon="favicon.ico">
+    <Grid>
+        <Label x:Name="label3" Content="ノード名：" HorizontalAlignment="Left" Margin="25,53,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label4" Content="ノード設定" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.132,0"/>
+        <Separator Height="26" Margin="73,10,10,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="nodetextBox" HorizontalAlignment="Left" Height="28" Margin="88,51,0,0" TextWrapping="Wrap" Text="node1" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label5" Content="スプレッドシート設定" HorizontalAlignment="Left" Margin="10,93,0,0" VerticalAlignment="Top"/>
+        <Separator Height="26" Margin="118,93,10.333,0" VerticalAlignment="Top"/>
+        <Label x:Name="label6" Content="スプレッドシートにデータを書き込む際は大学アカウント以外のGoogle APIに関連付けられたサービスアカウントが必要です。" HorizontalAlignment="Left" Margin="22,128,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label7" Content="Google APIで発行したjsonファイル：" HorizontalAlignment="Left" Margin="22,160,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="jsonTextBox" Height="28" Margin="211,157,122.667,0" TextWrapping="Wrap" Text="credential.json" VerticalAlignment="Top"/>
+        <Button x:Name="PickJsonButton" Content="参照" HorizontalAlignment="Right" Margin="0,157,39,0" VerticalAlignment="Top" Width="64" Height="28" Click="PickJsonButton_Click"/>
+        <Label x:Name="label8" Content="Google SpreadSheetにデータの書き込みを行うアカウントの設定を行います。&#xA;Google APIでjsonファイルを生成したサービスアカウントからのスプレッドシートへの書き込み権限が&#xA;付与されている必要があります。（上の&quot;サービスアカウントのID&quot;に設定したアドレスに書き込み権限を付与してください）&#xA;&#xA;※複数のノードで受付を行う場合、それぞれのノードで異なるアカウントとリンクする必要があります。&#xA;※Google APIの認証ファイルは学友会技術部より配布したものを使用してください。&#xA;　通常は変更する必要はありません。" HorizontalAlignment="Left" Margin="25,244,0,0" VerticalAlignment="Top" Height="122" Width="587"/>
+
+        <Label x:Name="label9" Content="スプレッドシートのID：" HorizontalAlignment="Left" Margin="25,377,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label10" Content="カード読み取りの間隔（未実装）：" HorizontalAlignment="Left" Margin="244,55,0,0" VerticalAlignment="Top"/>
+        <Slider x:Name="slider" HorizontalAlignment="Left" Margin="429,51,0,0" VerticalAlignment="Top" Width="155" TickPlacement="TopLeft" Maximum="10" Minimum="0.5" IsSnapToTickEnabled="True" TickFrequency="0.5" SmallChange="0.5" LargeChange="1" Value="5"/>
+        <Label x:Name="label11" Content="{Binding Value, ElementName=slider}" HorizontalAlignment="Left" Margin="589,53,0,0" VerticalAlignment="Top" Width="23"/>
+        <Label x:Name="label12" Content="秒" HorizontalAlignment="Left" Margin="617,53,0,0" VerticalAlignment="Top" Width="20"/>
+        <TextBox x:Name="spreadSheetIDBox" Height="28" Margin="140,377,39,0" TextWrapping="Wrap" VerticalAlignment="Top" Text=""/>
+        <Button x:Name="SaveSettingsbutton" Content="設定を保存" Margin="0,0,27.667,16" Height="32" HorizontalAlignment="Right" Width="100" VerticalAlignment="Bottom" Click="SaveSettingsbutton_Click"/>
+        <Label x:Name="label14" Content="参加者名簿のシート名：" HorizontalAlignment="Left" Margin="25,413,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="entryListbox" HorizontalAlignment="Left" Height="28" Margin="157,413,0,0" TextWrapping="Wrap" Text="学生リスト" VerticalAlignment="Top" Width="181"/>
+        <Label x:Name="label15" Content="スキャンした学生証リストのシート名：" HorizontalAlignment="Left" Margin="348,413,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="scanListBox" Height="28" Margin="533,413,0,0" TextWrapping="Wrap" Text="スキャンした学生証リスト" VerticalAlignment="Top" HorizontalAlignment="Left" Width="222"/>
+        <Button x:Name="button1" Content="キャンセル" Margin="0,0,151.667,16" Click="button1_Click" Height="32" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="100"/>
+        <Label x:Name="label1" Content="参加者名簿の氏名の列：" HorizontalAlignment="Left" Margin="25,452,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="参加者名簿の学籍番号の列：" HorizontalAlignment="Left" Margin="349,453,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="StudentNameBox" HorizontalAlignment="Left" Height="28" Margin="165,452,0,0" TextWrapping="Wrap" Text="C" VerticalAlignment="Top" Width="173"/>
+        <TextBox x:Name="StudentIDBox" HorizontalAlignment="Left" Height="28" Margin="513,453,0,0" TextWrapping="Wrap" Text="E" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label" Content="サービスアカウントのID：" HorizontalAlignment="Left" Margin="25,204,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="ServiceAccountIDBox" HorizontalAlignment="Left" Height="28" Margin="150,202,0,0" TextWrapping="Wrap" Text="account@test.iam.gserviceaccount.com" VerticalAlignment="Top" Width="605"/>
+        <Label x:Name="label16" Content="参加者名簿の参加者番号の列：" HorizontalAlignment="Left" Margin="25,492,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="EntryNumberRowBox" HorizontalAlignment="Left" Height="28" Margin="197,492,0,0" TextWrapping="Wrap" Text="J" VerticalAlignment="Top" Width="173"/>
+
+    </Grid>
+</Window>

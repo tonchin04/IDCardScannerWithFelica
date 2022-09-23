@@ -1,0 +1,22 @@
+﻿<Window x:Name="VersionWindow" x:Class="IDCardScannerWithFelica.Version"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="バージョン情報" Height="260" Width="490" ResizeMode="NoResize" Icon="favicon.ico">
+    <Grid>
+        <Image x:Name="image" Margin="28,28,0,0" Source="nfccardscan256px.png" HorizontalAlignment="Left" Width="128" Height="128" VerticalAlignment="Top"/>
+        <Button x:Name="button" Content="OK" Margin="180,0,180,18" Click="Version_OK_Click" Height="28" VerticalAlignment="Bottom"/>
+        <Label x:Name="label" Content="IDCardScanner with Felica" HorizontalAlignment="Left" Margin="169,29,0,0" VerticalAlignment="Top" Height="43" Width="281" FontSize="24"/>
+        <Label x:Name="label_Copy" Content="Version 2.1" HorizontalAlignment="Left" Margin="169,77,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy1" Content="Distributed by Tomohiro Kumaki" HorizontalAlignment="Left" Margin="169,110,0,0" VerticalAlignment="Top" Width="238"/>
+        <TextBlock Margin="0,0,18,24" Height="15" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="68">
+            <Hyperlink Click="License_open_Click">
+                <TextBlock Text="ライセンス情報" ></TextBlock>
+            </Hyperlink>
+        </TextBlock>
+        <Label x:Name="label1" Content="Google,Google Spread Sheet,Felica,その他のコンテンツは各社の商標です。" HorizontalAlignment="Left" Margin="169,143,0,0" VerticalAlignment="Top" FontSize="8"/>
+
+    </Grid>
+</Window>
